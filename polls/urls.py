@@ -3,6 +3,7 @@ from . import views
 
 #增加命名空間
 app_name = 'polls'
+# path(route, view, kwargs=None, name=None)
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     # ex: /polls/5/
