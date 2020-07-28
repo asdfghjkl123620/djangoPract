@@ -17,7 +17,7 @@ class IndexView(generic.ListView):
         "Return last five published questions"
         return Question.objects.filter(
         pub_date__lte=timezone.now()
-    ).order_by('-pub_date')[:5]
+        ).order_by('-pub_date')[:5]
 
 #如果用戶知道連結訪問他們(在發布日期時未來的那些投票不會在目錄頁index裡出現)，卻還是可以訪問到他們
 #在DetailView增加一些約束
